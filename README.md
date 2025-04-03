@@ -33,7 +33,7 @@ A simple website demonstrating cloud computing concepts (IaaS, PaaS, SaaS) hoste
    - **Drag & Drop**:  
      Go to the "Sites" tab → Drag your `index.html` file into Netlify's deployment zone.  
    - **GitHub Integration (Recommended)**:  
-     Click "Import an existing project" → Authorize Netlify → Select [your repository](https://github.com/RajathPatilKulkarni/Cloud-Computing-Seminar-Website).
+     Click "Import an existing project" → Authorize Netlify → Select [your repository](https://github.com/RajathPatilKulkarni/Cloud-Computing-Seminar-Website.git).
 
 3. **Trigger Deployment**  
    Netlify will automatically:
@@ -86,6 +86,14 @@ git push origin main
 ## 📄 License
 This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
+## 👤 Author
+**Rajath Patil Kulkarni**  
+- 🔗 [GitHub](https://github.com/RajathPatilKulkarni-06)  
+- 📂 [Project Repository](https://github.com/RajathPatilKulkarni/Cloud-Computing-Seminar-Website.git)  
+- 🌐 [Live Project](https://cloud-computing-seminar-project.netlify.app)
+
 ## 🙏 Acknowledgments
 - **NIST SP 800-145** cloud standards
+
+
 
