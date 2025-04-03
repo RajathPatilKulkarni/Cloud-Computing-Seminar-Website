@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing | Technology Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-darkest: #07070f;
+            --bg-dark: #0d0d1a;
+            --bg-mid-dark: #161629;
+            --gradient-primary: linear-gradient(45deg, #5c2d91, #4a3aff);
+            --gradient-accent: linear-gradient(45deg, #8a2be2, #4169e1);
+            --text-primary: #e6e6f2;
+            --text-secondary: #8a8ab8;
+            --border-color: rgba(138, 138, 184, 0.2);
+            --shadow-dark: rgba(0,0,0,0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg-darkest);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            background: var(--bg-mid-dark);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 25px 50px var(--shadow-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-weight: 400;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .cloud-models {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .cloud-model {
+            background: var(--bg-mid-dark);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 30px var(--shadow-dark);
+            transition: all 0.4s ease;
+        }
+
+        .cloud-model:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+
+        .cloud-model.active {
+            background: var(--gradient-primary);
+            border-color: rgba(138, 43, 226, 0.5);
+        }
+
+        .cloud-model h3 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cloud-model p {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .details {
+            background: var(--bg-mid-dark);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 15px 30px var(--shadow-dark);
+        }
+
+        .toggle-btn {
+            display: block;
+            width: 250px;
+            margin: 2rem auto;
+            padding: 1rem 1.5rem;
+            background: var(--gradient-accent);
+            color: var(--text-primary);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.5);
+        }
+
+        .details-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .details-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .details-content h2 {
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .details-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .details-content ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .signature {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Cloud Computing</h1>
+            <p>Exploring the Frontiers of Digital Infrastructure</p>
+        </header>
+
+        <section class="cloud-models">
+            <div class="cloud-model" data-model="iaas">
+                <h3>IaaS</h3>
+                <p>Infrastructure as a Service</p>
+            </div>
+            <div class="cloud-model" data-model="paas">
+                <h3>PaaS</h3>
+                <p>Platform as a Service</p>
+            </div>
+            <div class="cloud-model" data-model="saas">
+                <h3>SaaS</h3>
+                <p>Software as a Service</p>
+            </div>
+        </section>
+
+        <section class="details">
+            <button class="toggle-btn" id="detailsToggle">Explore Cloud Models</button>
+            <div class="details-content" id="detailsContent">
+                <h2>Cloud Service Models Decoded</h2>
+                <ul>
+                    <li><strong>IaaS:</strong> Virtualized computing infrastructure delivered via cloud</li>
+                    <li><strong>PaaS:</strong> Comprehensive platform for application development and deployment</li>
+                    <li><strong>SaaS:</strong> Ready-to-use software applications hosted in the cloud</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="signature">
+            Crafted by Rajath K Patil Kulkarni
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('detailsToggle').addEventListener('click', () => {
+            document.getElementById('detailsContent').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
