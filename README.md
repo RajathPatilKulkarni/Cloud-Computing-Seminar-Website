@@ -3,7 +3,6 @@
 [![HTML](https://img.shields.io/badge/HTML-5-orange)](#)
 [![CSS](https://img.shields.io/badge/CSS-3-blue)](#)
 [![Hosted on](https://img.shields.io/badge/Hosted%20on-Netlify-brightgreen)](https://cloud-computing-seminar-project.netlify.app)
-[![Status](https://img.shields.io/badge/Project-Type%3A%20Seminar-blueviolet)](#)
 
 A simple website demonstrating cloud computing concepts (IaaS, PaaS, SaaS) hosted on Netlify as part of a cloud infrastructure project.
 
